@@ -27,6 +27,8 @@ public class Data extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        searchPage = new javax.swing.JFrame();
+        jComboBox1 = new javax.swing.JComboBox();
         customerID = new javax.swing.JTextField();
         firstName = new javax.swing.JTextField();
         lastName = new javax.swing.JTextField();
@@ -43,10 +45,36 @@ public class Data extends javax.swing.JFrame {
         insert = new javax.swing.JButton();
         save = new javax.swing.JButton();
 
+        searchPage.setMinimumSize(new java.awt.Dimension(500, 500));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Customer ID", "First Name", "Last Name", "Street Adress", "City" }));
+
+        javax.swing.GroupLayout searchPageLayout = new javax.swing.GroupLayout(searchPage.getContentPane());
+        searchPage.getContentPane().setLayout(searchPageLayout);
+        searchPageLayout.setHorizontalGroup(
+            searchPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchPageLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+        searchPageLayout.setVerticalGroup(
+            searchPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchPageLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(239, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Data");
 
         prev.setText("Prev");
+        prev.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prevMouseClicked(evt);
+            }
+        });
 
         jLabel1.setText("CustomerID:");
 
@@ -59,18 +87,38 @@ public class Data extends javax.swing.JFrame {
         jLabel5.setText("City:");
 
         next.setText("Next");
+        next.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextMouseClicked(evt);
+            }
+        });
 
         delete.setText("Delete");
+        delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deleteMouseClicked(evt);
+            }
+        });
 
         insert.setText("Insert");
+        insert.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                insertMouseClicked(evt);
+            }
+        });
 
         save.setText("Save");
+        save.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                saveMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -130,11 +178,31 @@ public class Data extends javax.swing.JFrame {
                     .addComponent(delete)
                     .addComponent(insert)
                     .addComponent(save))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void prevMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prevMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prevMouseClicked
+
+    private void nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nextMouseClicked
+
+    private void insertMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_insertMouseClicked
+
+    private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteMouseClicked
+
+    private void saveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveMouseClicked
 
     /**
      * @param args the command line arguments
@@ -178,6 +246,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JButton delete;
     private javax.swing.JTextField firstName;
     private javax.swing.JButton insert;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -187,6 +256,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JButton next;
     private javax.swing.JButton prev;
     private javax.swing.JButton save;
+    private javax.swing.JFrame searchPage;
     private javax.swing.JTextField streetAddress;
     // End of variables declaration//GEN-END:variables
 }
